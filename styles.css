@@ -1,0 +1,57 @@
+:root {
+  --bg: #080808;
+  --soft: #f0e8da;
+  --muted: #aaa29a;
+  --line: #292524;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--soft); font-family: Georgia, 'Times New Roman', serif; }
+a { color: inherit; text-decoration: none; }
+.site { min-height: 100vh; background: #080808; }
+.language { position: fixed; top: 24px; right: 24px; z-index: 20; display: flex; gap: 8px; }
+.language button { background: rgba(0,0,0,.45); border: 1px solid rgba(240,232,218,.25); color: var(--muted); border-radius: 999px; padding: 8px 11px; letter-spacing: .14em; font-size: 11px; cursor: pointer; backdrop-filter: blur(8px); }
+.language button.active { color: var(--soft); border-color: rgba(240,232,218,.75); }
+.hero { min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; background-size: cover; background-position: center; overflow: hidden; animation: slowZoom 18s ease-in-out forwards; }
+.heroOverlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.58), rgba(0,0,0,.72)); }
+.heroContent { position: relative; max-width: 980px; padding: 40px 24px; }
+.kicker, .series, .number, .place, .domain { text-transform: uppercase; letter-spacing: .34em; font-size: 12px; color: var(--muted); }
+.hero h1 { margin: 24px 0 0; font-size: clamp(3.2rem, 11vw, 8.5rem); font-weight: 300; line-height: .98; letter-spacing: .18em; }
+.heroText { margin: 36px auto 0; max-width: 760px; font-size: clamp(1.15rem, 2.4vw, 1.8rem); line-height: 1.7; color: #ddd5ca; font-weight: 300; }
+.series { margin-top: 28px; }
+.discover { display: inline-block; margin-top: 70px; color: #8f8780; text-transform: uppercase; letter-spacing: .32em; font-size: 12px; }
+.intro { padding: 18vh 24px; border-top: 1px solid var(--line); text-align: center; max-width: 960px; margin: 0 auto; }
+.quote { font-size: clamp(1.9rem, 4vw, 3.4rem); line-height: 1.55; font-weight: 300; margin: 0; }
+.introText { margin: 54px auto 0; max-width: 760px; color: var(--muted); font-size: 1.18rem; line-height: 2; }
+.works { padding: 4vh 24px 14vh; display: grid; gap: 16vh; }
+.work { max-width: 1180px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.image { aspect-ratio: 4/5; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; box-shadow: 0 30px 70px rgba(0,0,0,.45); background: #111; }
+.image.order { order: 2; }
+.image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); display: block; }
+.workText h2 { font-size: clamp(2.2rem, 5vw, 4.8rem); font-weight: 300; line-height: 1.1; letter-spacing: .14em; margin: 22px 0 0; }
+.place { margin-top: 20px; }
+.body { margin-top: 54px; font-size: clamp(1.25rem, 2.3vw, 2rem); line-height: 1.9; font-weight: 300; color: #e8dfd4; }
+.note { margin-top: 34px; color: var(--muted); line-height: 1.9; font-size: 1rem; }
+.about { border-top: 1px solid var(--line); padding: 16vh 24px; max-width: 1050px; margin: 0 auto; display: grid; grid-template-columns: .85fr 1.35fr; gap: 80px; }
+.about h2 { margin: 0; font-size: clamp(2.2rem, 5vw, 4.5rem); font-weight: 300; text-transform: uppercase; letter-spacing: .14em; line-height: 1.25; }
+.about p { color: #d7cec4; font-size: 1.18rem; line-height: 1.95; margin: 0 0 24px; }
+.footer { background: #020202; border-top: 1px solid var(--line); text-align: center; padding: 15vh 24px 11vh; }
+.footer h2 { font-size: clamp(2rem, 5vw, 4.5rem); font-weight: 300; letter-spacing: .14em; margin: 28px 0 0; }
+.space { max-width: 780px; margin: 44px auto 0; color: #d7cec4; font-size: 1.2rem; line-height: 2; }
+.final { margin: 90px auto 0; font-size: clamp(1.8rem, 4vw, 3.2rem); font-style: italic; font-weight: 300; line-height: 1.5; }
+.domain { margin-top: 36px; }
+.buttons { margin-top: 60px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+.buttons a { border: 1px solid rgba(240,232,218,.35); border-radius: 999px; padding: 14px 22px; text-transform: uppercase; letter-spacing: .18em; font-size: 12px; color: #d8d0c7; transition: all .2s ease; }
+.buttons a:hover { background: var(--soft); color: #080808; }
+@keyframes slowZoom { from { background-size: 100%; } to { background-size: 106%; } }
+@media (max-width: 800px) {
+  .language { top: 16px; right: 16px; }
+  .hero h1 { letter-spacing: .1em; }
+  .series, .kicker, .number, .place, .domain { letter-spacing: .22em; }
+  .work, .about { grid-template-columns: 1fr; gap: 38px; }
+  .image.order { order: 0; }
+  .works { gap: 12vh; }
+  .intro, .about { padding-top: 12vh; padding-bottom: 12vh; }
+  .body { margin-top: 36px; }
+  .buttons { flex-direction: column; align-items: center; }
+}
