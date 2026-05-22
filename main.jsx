@@ -100,7 +100,7 @@ const content = {
     spaceTitle: 'AmoGalicia · Talento Galego',
     spaceText: 'HABITAR GALICIA also emerges from AmoGalicia, a space in Pontevedra dedicated to fine-art photography, illustration and contemporary Galician talent.',
     finalQuote: 'Every territory holds a memory.',
-    buttons: ['Contact', 'Instagram', 'Fine Art Editions']
+    buttons: ['Contact', 'Fine Art Editions']
   }
 };
 
@@ -160,7 +160,7 @@ function App() {
         <p className="domain">habitargalicia.art</p>
         <div className="buttons">
           <a href="mailto:info@amogalicia.com">{t.buttons[0]}</a>
-          <a href="https://www.instagram.com/amogalicia" target="_blank" rel="noreferrer">{t.buttons[1]}</a>
+          
           <a href="mailto:info@amogalicia.com?subject=Consulta%20ediciones%20Fine%20Art%20-%20Habitar%20Galicia">{t.buttons[2]}</a>
         </div>
       </footer>
