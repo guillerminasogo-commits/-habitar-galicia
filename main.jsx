@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { motion } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import './styles.css';
 import estampaImg from './estampa-galega-santiago-compostela-guillermina-sogo.jpg';
 import mariscadorasImg from './mariscadoras-poio-galicia-guillermina-sogo.jpg';
@@ -164,6 +165,7 @@ function App() {
           <a href="mailto:info@amogalicia.com?subject=Consulta%20ediciones%20Fine%20Art%20-%20Habitar%20Galicia">{t.buttons[2]}</a>
         </div>
       </footer>
+      <Analytics />
     </main>
   );
 }
